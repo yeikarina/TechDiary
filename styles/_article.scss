@@ -2,18 +2,35 @@
     display:flex;
     flex-flow: column nowrap;
     position: relative;
-    &-hardware-checkbox:checked ~ .News{
-        height: 0;
-    }
     &-hardware-checkbox:checked + .Section-hardware{
         height: fit-content;
-    }
-    &-software-checkbox:checked ~ section .Section-hardware{
-        height: 0;
-        overflow: hidden;
     }
     &-software-checkbox:checked + .Section-software{
         height: fit-content;
     }
-    
+    &-game-checkbox:checked + .Section-game{
+        height: fit-content;
+    }
+    &-general-checkbox:checked + .Section-general{
+        height: fit-content;
+    }
+}
+.Label-item{
+    background-color: #6397EE;
+    width: 100%;
+    border-radius: 0.3em; 
+    height: 4em;     
+    line-height: 4em;      
+    box-sizing: border-box;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0.05em 0.2em;
+    text-align: center;
+    padding: 0 0.5em;
+    font-weight: bold;
+    font-size: 1.5em;
+    &-image{
+        height:100%;
+    }
 }

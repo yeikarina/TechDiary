@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tec Diary</title>
+    <title>Tech Diary</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <main>
         <header class="Header">
             <img class="Header-img" alt="Imagen"
-                src="https://cdn.pixabay.com/photo/2018/07/14/11/33/network-3537401_1280.jpg">
-            <h1>Tec News</h1>
+                src="https://img.favpng.com/1/20/13/globe-technology-low-earth-orbit-png-favpng-yXcXPr9wN2eDJPy82Wg4zXL09.jpg">
+            <h1>Tech News</h1>
             <nav class="Header-nav">
-                <input class="checkbox Header-menu-action" type="checkbox" id="Header-checkbox">
                 <ul class="Header-ul">
                     <li class="Header-nav-item"><label for="Hardware-checkbox">Hardware</label></li>
                     <li class="Header-nav-item"><label for="Software-checkbox">Software</label></li>
@@ -33,7 +33,10 @@
             </ul>
         </aside>
         <article class="Article">
-            <input type="checkbox" id="Hardware-checkbox" class="checkbox Article-hardware-checkbox" value="Hardware" >
+            <label for="Hardware-checkbox" class="Label-item"><img class="Label-item-image"
+                    src="https://tecnologia-informatica.com/wp-content/uploads/2018/07/hardware-software-28.jpeg"
+                    alt="HardwareImage"> Hardware</label>
+            <input type="checkbox" id="Hardware-checkbox" class="checkbox Article-hardware-checkbox" value="Hardware">
             <section class="News Section-hardware">
                 <h2 class="News-title">Next-gen AMD APUs will have DDR5 support and Navi 2 graphics</h2>
                 <p class="News-p">
@@ -66,42 +69,84 @@
                     do with Zen 3 and Big Navi in the next few weeks.
                 </p>
             </section>
+            <label for="Software-checkbox" class="Label-item"><img class="Label-item-image" src="https://www.muycomputerpro.com/wp-content/uploads/2014/10/desarrollo_software.jpg" alt="Software image"> Software</label>
             <input type="checkbox" id="Software-checkbox" class="checkbox Article-software-checkbox">
             <section class="News Section-software">
-                <h2 class="News-title">Titulo 2</h2>
-                <p class="News-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, assumenda
-                    repudiandae in maxime fugit molestias ipsa facilis suscipit perferendis, voluptates deleniti, ea
-                    temporibus? Vero explicabo, sed et tenetur ex ipsa?</p>
-                <img class="News-img" src="news1 img" alt="mmmmm">
-                <p class="News-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia laborum
-                    exercitationem tenetur ducimus, nulla nihil illum id assumenda? Dolores ex qui consequuntur minus
-                    quasi eum veniam eaque magnam! Eveniet, repudiandae.Harum porro amet quis facere, illo fugit,
-                    suscipit non ipsam magni dignissimos animi maiores iste assumenda eos commodi repudiandae voluptatem
-                    omnis autem expedita repellendus eligendi tenetur fuga dolorem? Repellendus, veritatis.</p>
+                <h2 class="News-title">Security software for autonomous vehicles</h2>
+                <p class="News-p">
+                    A car approaches an intersection. Another vehicle jets out of the cross street, but it is not yet
+                    clear whether it will turn right or left. At the same time, a pedestrian steps into the lane
+                    directly in front of the car, and there is a cyclist on the other side of the street. People with
+                    road traffic experience will in general assess the movements of other traffic participants
+                    correctly.
+                </p>
+                <img class="News-img" src="https://www.pymnts.com/wp-content/uploads/2019/07/self-driving-cars-skepticism-regulation.jpg" alt="Autonomus Vehicles">
+                <p class="News-p">
+                    "These kinds of situations present an enormous challenge for autonomous vehicles controlled by
+                    computer programs," explains Matthias Althoff, Professor of Cyber-Physical Systems at TUM. "But
+                    autonomous driving will only gain acceptance of the general public if you can ensure that the
+                    vehicles will not endanger other road users -- no matter how confusing the traffic situation."
+                    <h3>Algorithms that peer into the future</h3>
+                </p>
+                <p class="News-p">
+                    The ultimate goal when developing software for autonomous vehicles is to ensure that they will not cause accidents. Althoff, who is a member of the Munich School of Robotics and Machine Intelligence at TUM, and his team have now developed a software module that permanently analyzes and predicts events while driving. Vehicle sensor data are recorded and evaluated every millisecond. The software can calculate all possible movements for every traffic participant -- provided they adhere to the road traffic regulations -- allowing the system to look three to six seconds into the future.
+                </p>
+                <p class="News-p">
+                    Based on these future scenarios, the system determines a variety of movement options for the vehicle. At the same time, the program calculates potential emergency maneuvers in which the vehicle can be moved out of harm's way by accelerating or braking without endangering others. The autonomous vehicle may only follow routes that are free of foreseeable collisions and for which an emergency maneuver option has been identified.
+                    <h3>Streamlined models for swift calculations</h3>
+                </p>
+                <p class="News-p">
+                    This kind of detailed traffic situation forecasting was previously considered too time-consuming and thus impractical. But now, the Munich research team has shown not only the theoretical viability of real-time data analysis with simultaneous simulation of future traffic events: They have also demonstrated that it delivers reliable results.
+                </p>
+                
+                <p class="News-p">
+                    The quick calculations are made possible by simplified dynamic models. So-called reachability analysis is used to calculate potential future positions a car or a pedestrian might assume. When all characteristics of the road users are taken into account, the calculations become prohibitively time-consuming. That is why Althoff and his team work with simplified models. These are superior to the real ones in terms of their range of motion -- yet, mathematically easier to handle. This enhanced freedom of movement allows the models to depict a larger number of possible positions but includes the subset of positions expected for actual road users.
+                    <h3>Real traffic data for a virtual test environment</h3>
+                </p>
+                <p class="News-p">
+                    For their evaluation, the computer scientists created a virtual model based on real data they had collected during test drives with an autonomous vehicle in Munich. This allowed them to craft a test environment that closely reflects everyday traffic scenarios. "Using the simulations, we were able to establish that the safety module does not lead to any loss of performance in terms of driving behavior, the predictive calculations are correct, accidents are prevented, and in emergency situations the vehicle is demonstrably brought to a safe stop," Althoff sums up.
+                </p>
+                <p class="News-p">
+                    The computer scientist emphasizes that the new security software could simplify the development of autonomous vehicles because it can be combined with all standard motion control programs.
+                </p>
+
             </section>
-            <section class="News">
-                <h2 class="News-title">Titulo 3</h2>
-                <p class="News-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, assumenda
-                    repudiandae in maxime fugit molestias ipsa facilis suscipit perferendis, voluptates deleniti, ea
-                    temporibus? Vero explicabo, sed et tenetur ex ipsa?</p>
-                <img class="News-img" src="news1 img" alt="mmmmm">
-                <p class="News-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia laborum
-                    exercitationem tenetur ducimus, nulla nihil illum id assumenda? Dolores ex qui consequuntur minus
-                    quasi eum veniam eaque magnam! Eveniet, repudiandae.Harum porro amet quis facere, illo fugit,
-                    suscipit non ipsam magni dignissimos animi maiores iste assumenda eos commodi repudiandae voluptatem
-                    omnis autem expedita repellendus eligendi tenetur fuga dolorem? Repellendus, veritatis.</p>
+            <label for="Games-checkbox" class="Label-item"><img class="Label-item-image" src="./images/game-image.jpg" alt="Games Image">
+                Games</label>
+            <input type="checkbox" id="Games-checkbox" class="checkbox Article-game-checkbox">
+            <section class="News Section-game">
+                <h2 class="News-title">Among Us 2 cancelled in favour of ongoing work on the current game</h2>
+                <p class="News-p">
+                    A month after its announcement, a sequel to the suddenly huge "multiplayer space mystery" Among Us has been cancelled. As far as cancellations go, it's a relatively welcome one: studio Innersloth has opted to keep working on (and fixing) the original game.
+                </p>
+                <p class="News-p">
+                    In its announcement, Innersloth writes that while the Among Us codebase is unwieldy and antiquated, it makes sense to continue work on it given its sudden popularity. Of course, that means a lot of work adapting it for a playerbase much larger than the studio ever expected.
+                </p>
+                <img class="News-img" src="https://cdn.mos.cms.futurecdn.net/qhL9cyTDnHECuP8BqSvQLm-970-80.jpg.webp" alt="mmmmm">
+                <p class="News-p">
+                    "We have decided to cancel Among Us 2 and instead put all our focus into improving Among Us 1," the post reads. "All of the content we had planned for Among Us 2 will instead go into Among Us 1." 
+                </p>
+                <p class="News-p">
+                    "This is probably the more difficult choice because it means going deep into the core code of the game and reworking several parts of it."
+                </p>
+                <p class="News-p">
+                    It seems like the studio will be busy. Following the game's sudden ascent to widespread Twitch popularity its servers have been copping a hammering, which is a situation still being addressed. More excitingly, colorblind support is on the horizon, as is a new stage and a friends system.
+                </p>
+                <p class="News-p">
+                    Upon announcing the sequel last month, Innersloth noted that the original game was "not created to be this big" and as a result, it was "extremely hard to add more things without breaking existing things". Still, it's a big risk to fragment the playerbase of such a seemingly niche title, so it's probably a wise move to fix the game people already have.
+                </p>
             </section>
-            <section class="News">
-                <h2 class="News-title">Titulo 4</h2>
-                <p class="News-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, assumenda
-                    repudiandae in maxime fugit molestias ipsa facilis suscipit perferendis, voluptates deleniti, ea
-                    temporibus? Vero explicabo, sed et tenetur ex ipsa?</p>
-                <img class="News-img" src="news1 img" alt="mmmmm">
-                <p class="News-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia laborum
-                    exercitationem tenetur ducimus, nulla nihil illum id assumenda? Dolores ex qui consequuntur minus
-                    quasi eum veniam eaque magnam! Eveniet, repudiandae.Harum porro amet quis facere, illo fugit,
-                    suscipit non ipsam magni dignissimos animi maiores iste assumenda eos commodi repudiandae voluptatem
-                    omnis autem expedita repellendus eligendi tenetur fuga dolorem? Repellendus, veritatis.</p>
+            <label for="General-checkbox" class="Label-item"><img class="Label-item-image" src="" alt=""> General</label>
+            <input type="checkbox" id="General-checkbox" class="checkbox Article-general-checkbox">
+            <section class="News Section-general">
+                <h2 class="News-title">Google celebrates 22nd birthday, together but from a distance</h2>
+                <p class="News-p">
+                    Google is marking its 22nd year in existence Sunday with an animated birthday Doodle.
+                </p>
+                <video autoplay="" loop="" muted="" playsinline="" class="News-img"><source src="https://cnet1.cbsistatic.com/img/8YEq6_A-zuiHzxpSy4ZM_kQk6I4=/1092x0/filters:gifv()/2020/09/27/c549f8a7-395a-42a6-90fe-ddd29901e912/googles-22nd-birthday-6753651837108550-2xa.gif" class="News-img" alt="googles-22nd-birthday-6753651837108550-2xa.gif" type="video/mp4"></video>
+                <p class="News-p">
+                    The Doodle shows us Google's G celebrating with its oogle colleagues with cake and presents in an online video conference party. The virtual party reminds us that in the time of coronavirus, it's important to maintain social distancing, even on special occasions.
+                </p>
             </section>
         </article>
         <aside class="Right-menu">
@@ -112,8 +157,27 @@
                 <li class="Right-items"><label for=""></label></li>
             </ul>
         </aside>
-        <footer class="footer">
-            <p>aqui va algo, pero no se que</p>
+        <footer class="Footer">
+            <ul class="Footer-">
+                <li class="Footer-item">
+                    <a href="https://www.facebook.com/" class="Footer-">
+                        <i class="fa fa-facebook big-icon"></i>
+                    </a>
+                </li>
+                <li class="Footer-item">
+                    <a href="https://www.instagram.com/" class="Footer-">
+                        <i class="fa fa-instagram big-icon"></i>
+                    </a>
+                </li>
+                <li class="Footer-item">
+                    <a href="https://twitter.com/tweeter?lang=es" class="Footer-">
+                        <i class="fa fa-twitter big-icon"></i>
+                    </a>
+                </li>
+            </ul>
+            <p class="Footer-p">Llamanos 2345432</p>
+            <p class="Footer-p">Direccion calle 56-A sur #34A76</p>
+            <p class="Footer-p">copyright 2020</p>
         </footer>
     </main>
 </body>
