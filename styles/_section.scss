@@ -1,0 +1,12 @@
+.News{
+    display: inline-block;
+    position: relative;
+    background-color: white;
+    height: 0px;
+    overflow: hidden;    
+    transition: all 1s ease;
+    padding: 0 0.5em;
+    &-img{
+        width: 100%;
+    }
+}

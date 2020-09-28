@@ -1,0 +1,114 @@
+.Header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: row-reverse wrap;
+          flex-flow: row-reverse wrap;
+  position: relative;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.Header-img {
+  width: 50%;
+}
+
+.Header-nav {
+  display: block;
+  width: 100%;
+  background-color: #6397EE;
+}
+
+.Header-nav-item {
+  background-color: white;
+  width: 25%;
+  border-radius: 0.1em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+  display: inline-block;
+  margin: 0.2em 0.2em;
+  text-align: center;
+  padding: 0 0.5em;
+}
+
+.Header-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  position: relative;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0;
+  margin: 0.3em 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.Left-menu {
+  display: none;
+}
+
+.Article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  position: relative;
+}
+
+.Article-hardware-checkbox:checked ~ .News {
+  height: 0;
+}
+
+.Article-hardware-checkbox:checked + .Section-hardware {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.Article-software-checkbox:checked ~ section .Section-hardware {
+  height: 0;
+  overflow: hidden;
+}
+
+.Article-software-checkbox:checked + .Section-software {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.News {
+  display: inline-block;
+  position: relative;
+  background-color: white;
+  height: 0px;
+  overflow: hidden;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  padding: 0 0.5em;
+}
+
+.News-img {
+  width: 100%;
+}
+
+p {
+  border: 1px solid black;
+}
+
+.checkbox {
+  position: relative;
+}
+/*# sourceMappingURL=style.css.map */

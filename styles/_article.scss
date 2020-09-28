@@ -1,0 +1,19 @@
+.Article{
+    display:flex;
+    flex-flow: column nowrap;
+    position: relative;
+    &-hardware-checkbox:checked ~ .News{
+        height: 0;
+    }
+    &-hardware-checkbox:checked + .Section-hardware{
+        height: fit-content;
+    }
+    &-software-checkbox:checked ~ section .Section-hardware{
+        height: 0;
+        overflow: hidden;
+    }
+    &-software-checkbox:checked + .Section-software{
+        height: fit-content;
+    }
+    
+}
