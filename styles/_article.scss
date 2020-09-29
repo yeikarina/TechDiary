@@ -2,6 +2,7 @@
     display:flex;
     flex-flow: column nowrap;
     position: relative;
+    align-items: center;
     &-hardware-checkbox:checked + .Section-hardware{
         height: fit-content;
     }
@@ -33,4 +34,8 @@
     &-image{
         height:100%;
     }
+    @media screen and (min-width: 1024px) {
+        max-width: 60%;
+                
+      }
 }
