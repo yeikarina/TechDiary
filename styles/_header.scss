@@ -6,7 +6,7 @@
     align-items: center;
     width: 100%;
     &-img{
-        width: 40%;
+        width: 30%;
         background-color: white;
     }
     &-nav{
@@ -52,8 +52,10 @@
     &-Hamburguer-menu:checked ~ .Header-ul{
         height: fit-content;
     }
-    @media screen and (min-width: 1024px) {
-        justify-content: flex-start;
+    @media screen and (min-width: 768px){
+        &-img{
+            max-width: 20%;
+        }
         &-nav{
             display: flex;
             align-items: center;
@@ -82,7 +84,20 @@
                     background-color: white;
                 }
             }
+        }        
+        &-ul{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-end;
+            margin: 0;
+            height: fit-content;
         }
+        &-Hamburger-icon{
+            display:none;
+        }
+    }
+    @media screen and (min-width: 1024px) {
+        justify-content: flex-start;        
         &-img{
             max-width: 10%;
         }
@@ -97,9 +112,6 @@
             justify-content: flex-end;
             margin: 0;
             height: fit-content;
-        }
-        &-Hamburger-icon{
-            display:none;
         }
       }
 }
