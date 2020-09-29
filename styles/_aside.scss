@@ -21,7 +21,8 @@
     }
     &-news{
         box-sizing: border-box;
-        width: 50%;
+        width: 50%;        
+        padding: 0.5em;
     }
     @media screen  and (min-width: 1024px){
         flex-flow: column nowrap; 
@@ -35,6 +36,13 @@
         &-news-p{
             margin: 0;
 
+        }
+        &-news{
+            width: 100%;
+            box-sizing: border-box;
+        }
+        &-title{
+            text-align: center;
         }
     }
 }
