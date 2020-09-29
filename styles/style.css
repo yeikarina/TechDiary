@@ -4,8 +4,8 @@
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
-      -ms-flex-flow: row-reverse nowrap;
-          flex-flow: row-reverse nowrap;
+      -ms-flex-flow: row-reverse wrap;
+          flex-flow: row-reverse wrap;
   position: relative;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
@@ -17,28 +17,74 @@
 }
 
 .Header-img {
-  width: 50%;
+  width: 40%;
   background-color: white;
 }
 
 .Header-nav {
-  display: none;
   width: 100%;
   font-weight: bold;
 }
 
+.Header-nav-item {
+  background-color: #303339;
+  color: white;
+  height: 2em;
+  line-height: 2em;
+}
+
+.Header-nav-item a {
+  text-decoration: none;
+  color: white;
+}
+
+.Header-nav-item a:visited {
+  color: white;
+}
+
+.Header-nav-item:hover {
+  background-color: blue;
+}
+
 .Header-ul {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
   position: relative;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   padding: 0;
   margin: 0.3em 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  text-align: center;
+  height: 0;
+  overflow: hidden;
+}
+
+.Header-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.Header-Hamburguer-menu:checked ~ .Header-ul {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 @media screen and (min-width: 1024px) {
@@ -62,10 +108,10 @@
     height: 3em;
     line-height: 3em;
     background-color: white;
-    width: 18%;
+    width: 10%;
     border-radius: 0.1em;
-    -webkit-box-sizing: content-box;
-            box-sizing: content-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     list-style: none;
     display: inline-block;
     text-align: center;
@@ -79,6 +125,7 @@
   }
   .Header-nav-item:hover {
     border-bottom: 0.2em solid blueviolet;
+    background-color: white;
   }
   .Header-img {
     max-width: 10%;
@@ -94,16 +141,25 @@
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
-    width: 50%;
   }
   .Header-ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
     margin: 0;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .Header-Hamburger-icon {
+    display: none;
   }
 }
 
@@ -112,14 +168,44 @@
 }
 
 .Left-section {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.Left-section-news-img {
+  width: 100%;
+  margin-bottom: 1em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.Left-section-news-p {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  margin: 0px;
+  margin-right: 0;
+}
+
+.Left-section-title {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+}
+
+.Left-section-news {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 50%;
 }
 
 @media screen and (min-width: 1024px) {
   .Left-section {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
@@ -134,7 +220,6 @@
   }
   .Left-section-news-img {
     max-width: 100%;
-    margin-bottom: 1em;
   }
   .Left-section-news-p {
     margin: 0;
@@ -154,7 +239,6 @@
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  border: 1px solid magenta;
 }
 
 .Article-hardware-checkbox:checked + .Section-hardware {
