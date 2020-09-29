@@ -1,3 +1,23 @@
-.Left-menu, .Right-menu{
+.Right-menu{
+    display: none; 
+}
+.Left-section{
     display: none;
+    
+    @media screen  and (min-width: 1024px){  
+        display: flex;
+        flex-flow: column nowrap; 
+        align-items: center;
+        width: 20%;
+        box-sizing: border-box;
+        background-color: lightgrey;
+        &-news-img{
+            max-width: 100%;
+            margin-bottom: 1em;
+        }  
+        &-news-p{
+            margin: 0;
+
+        }
+    }
 }

@@ -3,6 +3,8 @@
     flex-flow: column nowrap;
     position: relative;
     align-items: center;
+    width: 100%;
+    border: 1px solid magenta;
     &-hardware-checkbox:checked + .Section-hardware{
         height: fit-content;
     }
@@ -14,6 +16,10 @@
     }
     &-general-checkbox:checked + .Section-general{
         height: fit-content;
+    }
+    @media screen and (min-width: 1024px){
+        width: 80%;
+        box-sizing: border-box;
     }
 }
 .Label-item{
@@ -35,7 +41,7 @@
         height:100%;
     }
     @media screen and (min-width: 1024px) {
-        max-width: 60%;
-                
+        max-width: 85%;
+        margin: 0;        
       }
 }
